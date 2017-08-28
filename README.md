@@ -1,24 +1,8 @@
-# README
+# Repos Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A simple example of how to combine has many relationships that can be both
+direct or through a second model. In this example, Users can have code
+Repositories either directly or through an Organization that they have
+Membership with. A Repository belongs to it's owner polymorphically, in this
+case it can be either a User or an Organization. Check the seed file for a
+quick example.
