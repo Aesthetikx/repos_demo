@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# A user...
+user = User.create(username: 'username')
+# ... with a personal repository
+myrepo = Repository.create(name: 'Personal Project', owner: user)
+
+# An organization...
+organization = Organization.create(name: 'Hackergroup')
+# ... with a shared repository
+orgrepo = Repository.create(name: 'Big Project', owner: organization)
+
+# user belongs to the organization
+membership = Membership.create(user: user, organization: organization)
+
+puts "User's repositories:"
+puts user.repositories.pluck(:name)
